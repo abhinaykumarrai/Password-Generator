@@ -1,0 +1,219 @@
+*,*::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg ,rgb(215, 183, 189),rgb(82, 82, 137));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    justify-items: center;
+    justify-content: center;
+}
+.container{
+   width: 90%;
+   max-width: 450px;
+
+}
+
+h1{
+    color: rgb(9, 0, 16);
+    opacity: 0.85;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+.display-container{
+   position: relative;
+   border-radius: 10px;
+   background-color: rgb(98, 103, 131);
+   margin: 1rem 0;
+   border-bottom: 3.5px solid rgb(82, 82, 137);
+   box-shadow: 1px 1px 2px rgb(98, 103, 131),-1px -1px 2px rgb(98, 103, 131);
+   padding-top: 0.35rem;
+   display: flex;
+   justify-content: space-between;
+}
+.display{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+}
+.display::placeholder{
+    position: absolute;
+     color: rgb(231, 231, 188);
+     top: 50%;
+     transform: translateY(-50%);
+     left: 1.5rem;
+     font-size: 1.5rem;
+     line-height: 30px;
+}
+.display-container button{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.copyBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.tooltip{
+    color: rgb(231, 231, 188);
+    position: absolute;
+    font-size: 1rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+    background-image: linear-gradient(360deg,rgb(87, 87, 208),rgb(169, 136, 142));
+}
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.input-container{
+    width: 100%;
+    background-color: rgb(98, 103, 131);
+    border-radius: 10px;
+    padding: 2rem;
+    border-bottom: 3.5px solid rgb(82, 82, 137);
+    box-shadow: 1px 1px 2px rgb(98, 103, 131),-1px -1px 2px rgb(98, 103, 131);
+}
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.length-container p:nth-child(1){
+    color: rgb(9, 0, 16);
+    font-size: 1.5rem;
+}
+.length-container p:nth-child(2){
+    color: rgb(231, 231, 188);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+.checks{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+.checks input{
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgb(4, 68, 68);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+
+}
+.checks input:checked{
+    background-color: rgb(57, 39, 131);
+}
+.checks input:checked::before{
+    content: "\2713";
+    font-weight: 1000;
+    color: white;
+}
+.checks label{
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(120, 127, 165);
+    border:2px solid rgb(4, 68, 68);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    background-image: linear-gradient( rgb(57, 39, 131),rgb(37, 36, 100));
+    background-repeat: none;
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgb(231, 231, 188);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgb(231, 231, 188);
+    transition: all 100ms ease-in;
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid rgb(231, 231, 165);
+    background-color: rgb(0, 0, 69);
+    box-shadow: 0px 0px 15px 5px rgb(231, 231, 188);
+}
+.slider:focus{
+     outline: 2px solid rgb(231, 231, 188);
+}
+
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strength-container p{
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+.strength-container div{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    
+}
+
+.generateButton{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: rgb(57, 39, 131);
+    border-radius: 10px;
+    border-bottom: 4px solid rgb(37, 36, 100);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 1000;
+    font-size:large;
+    color: whitesmoke;    
+}
+
+
+
+
